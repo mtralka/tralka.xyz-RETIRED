@@ -25,12 +25,19 @@ onMounted(async () => {
 
   const loader = new GLTFLoader()
 
-  const landsatModel = await loader.loadAsync('/LANDSAT/landat.glb')
+  const landsatModel = await loader.loadAsync('/landsat.glb')
   console.log(landsatModel)
   landsat = setupModel(landsatModel)
 
-  landsat.position.set(0, 0, 0)
-  landsat.rotation.set(0, 0, 0)
+  // landsat.position.set(0, 0, 0)
+  // landsat.rotation.set(0, 0, 0)
+  // landsat.rotation.y = Math.PI / 2
+  // landsat.rotation.z = Math.PI / 2
+  // landsat.rotation.x = Math.PI / 2
+  landsat.position.set(0.5, -0.5, 1)
+  landsat.rotateZ(THREE.Math.degToRad(90))
+  landsat.rotateY(THREE.Math.degToRad(180))
+  landsat.rotateZ(THREE.Math.degToRad(-20))
 
   scene.add(landsat)
 
@@ -116,6 +123,7 @@ const animate = () => {
   // cube.rotation.y += 0.002
   // cube.rotation.x += 0.002
   landsat.rotation.y += 0.002
+
   animateThreeJs()
   //   needResize()
 }

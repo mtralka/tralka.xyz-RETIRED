@@ -16,6 +16,7 @@ const isSmallScreen = useMediaQuery('(max-width: 640px')
   <div>
     <div class="relative">
       <PageLayout
+        class="text-white"
         title="Geospatial Software Engineer"
         subtitle="Matthew Tralka"
       />
@@ -42,9 +43,7 @@ const isSmallScreen = useMediaQuery('(max-width: 640px')
         />
       </HorizontalContainer>
     </PageLayout>
-    <PageLayout title="Skills.">
-      TEST
-    </PageLayout>
+    <PageLayout title="Skills."> TEST </PageLayout>
   </div>
 </template>
 <style>
