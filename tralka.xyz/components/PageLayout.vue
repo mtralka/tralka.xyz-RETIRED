@@ -6,10 +6,20 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  titleColor: {
+    type: String,
+    required: false,
+    default: '#232f34',
+  },
   subtitle: {
     type: String,
     required: false,
     default: '',
+  },
+  subtitleColor: {
+    type: String,
+    required: false,
+    default: '#4a6572',
   },
   sideLink: {
     type: Object,
@@ -28,8 +38,17 @@ const props = defineProps({
         >
           <p
             v-if="subtitle"
-            class="font-medium text-xl md:text-2xl uppercase tracking-wide ml-1"
-            style="color: #4a6572"
+            class="
+              font-medium
+              text-xl
+              md:text-2xl
+              uppercase
+              tracking-wide
+              ml-1
+              z-50
+              relative
+            "
+            :style="{ color: subtitleColor }"
           >
             {{ subtitle }}
           </p>
@@ -43,8 +62,10 @@ const props = defineProps({
             "
           >
             <h1
-              class="text-5xl md:text-7xl tracking-wide font-extrabold"
-              style="color: #232f34"
+              class="text-5xl md:text-7xl tracking-wide font-extrabold z-50"
+              :style="{
+                color: titleColor,
+              }"
             >
               {{ title }}
             </h1>

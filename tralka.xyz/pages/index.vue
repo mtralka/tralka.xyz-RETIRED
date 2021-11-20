@@ -16,14 +16,15 @@ const isSmallScreen = useMediaQuery('(max-width: 640px')
   <div>
     <div class="relative">
       <PageLayout
-        class="text-white"
+        class="text-white z-[99]"
         title="Geospatial Software Engineer"
         subtitle="Matthew Tralka"
+        titleColor="white"
+        subtitleColor="#8a7979"
       />
 
-      <IndexModel
-        class="absolute bottom-0 md:right-0 -right-40 overflow-x-hidden"
-      />
+      <IndexModel class="absolute h-screen w-screen bottom-0 left-0" />
+      <!-- absolute bottom-0 md:right-0 -right-40 overflow-x-hidden -->
     </div>
 
     <!-- :side-link="{ text: 'all', link: '/projects' }" -->
