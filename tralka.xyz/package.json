@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "dev:proxy": "nuxt && npx netlify-cms-proxy-server",
+    "dev:host": "nuxt --hostname 0.0.0.0 --port 8080",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -18,6 +19,7 @@
     "@nuxtjs/composition-api": "^0.30.0",
     "@vueuse/core": "^6.9.0",
     "core-js": "^3.15.1",
+    "draco3d": "^1.4.3",
     "nuxt": "^2.15.7",
     "three": "^0.134.0",
     "vue-horizontal": "^0.8.12"

@@ -10,6 +10,11 @@ const props = defineProps({
     default: 'All',
   },
   linkToRest: {
+    type: String,
+    required: false,
+    default: '',
+  },
+  showLinkToRest: {
     type: Boolean,
     required: false,
     default: true,
@@ -29,8 +34,8 @@ const isSmallScreen = useMediaQuery('(max-width: 640px')
         <slot />
         <div class="flex items-start justify-center">
           <nuxt-link
-            v-if="linkToRest"
-            to="/news"
+            v-if="showLinkToRest"
+            :to="linkToRest"
             class="
               flex flex-row
               items-center

@@ -1,24 +1,30 @@
 <script setup>
+import { reactive, useContext, useFetch } from '@nuxtjs/composition-api'
 import { useMediaQuery } from '@vueuse/core'
 import HorizontalCard from '~/components/HorizontalCard.vue'
 import HorizontalContainer from '~/components/HorizontalContainer.vue'
-import IndexModel from '~/components/IndexModel.vue'
+import IndexModel from '~/components/IndexModel2.vue'
 import PageLayout from '~/components/PageLayout.vue'
-const data = [
-  { link: 'www.google.com', text: 'Github', icon: 'mdi:github' },
-  { link: 'www.link.com', text: 'Read more', icon: 'mdi:info' },
-]
 
+const context = useContext()
 const isSmallScreen = useMediaQuery('(max-width: 640px')
+
+const cardOneContent = reactive({})
+const projects = reactive({})
+
+const { fetch, fetchState } = useFetch(async () => {
+  cardOneContent.value = await context.$content('index/index-card-one').fetch()
+  projects.value = await context.$content('projects').without(['body']).fetch()
+})
 </script>
 
 <template>
   <div>
     <div class="relative">
       <PageLayout
-        class="text-white z-[99]"
-        title="Geospatial Software Engineer"
-        subtitle="Matthew Tralka"
+        class="text-white z-[99] bg-black"
+        :title="cardOneContent.value.title || ''"
+        :subtitle="cardOneContent.value.subtitle || ''"
         titleColor="white"
         subtitleColor="#8a7979"
       />
@@ -27,23 +33,27 @@ const isSmallScreen = useMediaQuery('(max-width: 640px')
       <!-- absolute bottom-0 md:right-0 -right-40 overflow-x-hidden -->
     </div>
 
-    <!-- :side-link="{ text: 'all', link: '/projects' }" -->
-    <PageLayout
-      title="Projects"
-      subtitle="featured"
-      class="bg-red-700 bg-orange-600"
-    >
-      <HorizontalContainer end-scroll-text="All Projects">
-        <HorizontalCard
-          v-for="idx in 4"
-          :key="idx"
-          title="EOPlatform"
-          subtitle="Remote sensing made easy"
-          :links="data"
-          class="news-scroll__container"
-        />
-      </HorizontalContainer>
-    </PageLayout>
+    <!-- :side-link="{ text: 'all', link: '/projects' }"  #24aab0 -->
+    <div class="relative">
+      <PageLayout title="Projects" subtitle="featured" class="bg-amber-600">
+        <HorizontalContainer
+          end-scroll-text="All Projects"
+          link-to-rest="/projects/"
+          class="z-50 relative"
+        >
+          <HorizontalCard
+            v-for="project in projects.value"
+            :key="project.slug"
+            :title="project.title || ''"
+            :subtitle="project.description || ''"
+            :card-link="project.path || ''"
+            :links="project.links || []"
+            class="news-scroll__container"
+          />
+        </HorizontalContainer>
+        <!-- <SkyModel class="absolute h-screen w-screen bottom-0 left-0" /> -->
+      </PageLayout>
+    </div>
     <PageLayout title="Skills."> TEST </PageLayout>
   </div>
 </template>

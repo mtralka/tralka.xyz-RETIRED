@@ -206,7 +206,7 @@ const animate = () => {
   landsat.rotation.x += THREE.Math.degToRad(0.000075)
   t = t > 1 ? 0 : (t += 0.0002)
   const delta = clock.getDelta()
-  mixer.update(delta / 1.2)
+  mixer.update(delta / 1.5)
 
   animateThreeJs()
   //   needResize()
