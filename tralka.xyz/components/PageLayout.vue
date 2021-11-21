@@ -16,6 +16,11 @@ const props = defineProps({
     required: false,
     default: '',
   },
+  backgroundColor: {
+    type: String,
+    required: false,
+    default: '#4a6572',
+  },
   subtitleColor: {
     type: String,
     required: false,
@@ -30,7 +35,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="w-full h-screen text-accent relative bg-primary">
+  <div
+    class="w-full h-screen text-accent relative bg-primary"
+    :style="{ background: backgroundColor }"
+  >
     <div class="max-w-6xl">
       <div class="pt-36 md:pt-52 md:pl-20 w-full h-full space-y-14">
         <div

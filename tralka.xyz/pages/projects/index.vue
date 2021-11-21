@@ -7,9 +7,10 @@ const context = useContext()
 const isSmallScreen = useMediaQuery('(max-width: 640px')
 
 const projects = reactive({})
-
 const { fetch, fetchState } = useFetch(async () => {
-  projects.value = await context.$content('projects').without(['body']).fetch()
+  const test = await context.$content('projects').without(['body']).fetch()
+  console.log(test)
+  projects.value = test
 })
 </script>
 
@@ -30,7 +31,7 @@ const { fetch, fetchState } = useFetch(async () => {
         "
       >
         <HorizontalCard
-          v-for="project in projects.value || []"
+          v-for="project in projects.value"
           :key="project.slug"
           :title="project.title || ''"
           :subtitle="project.description || ''"

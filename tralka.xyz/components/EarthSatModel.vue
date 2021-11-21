@@ -108,7 +108,7 @@ const animate = () => {
 
   t = t > 1 ? 0 : (t += 0.0002)
   const delta = clock.getDelta()
-  mixer.update(delta)
+  mixer.update(delta / 3)
   combined.children[2].children[0].rotateX(0.005)
   animateThreeJs()
 }

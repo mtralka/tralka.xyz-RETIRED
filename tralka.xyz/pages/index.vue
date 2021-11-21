@@ -1,9 +1,9 @@
 <script setup>
 import { reactive, useContext, useFetch } from '@nuxtjs/composition-api'
 import { useMediaQuery } from '@vueuse/core'
+import EarthSatModel from '~/components/EarthSatModel.vue'
 import HorizontalCard from '~/components/HorizontalCard.vue'
 import HorizontalContainer from '~/components/HorizontalContainer.vue'
-import IndexModel from '~/components/IndexModel2.vue'
 import PageLayout from '~/components/PageLayout.vue'
 
 const context = useContext()
@@ -25,17 +25,20 @@ const { fetch, fetchState } = useFetch(async () => {
         class="text-white z-[99] bg-black"
         :title="cardOneContent.value.title || ''"
         :subtitle="cardOneContent.value.subtitle || ''"
-        titleColor="white"
-        subtitleColor="#8a7979"
+        :background-color="cardOneContent.value.backgroundColor"
+        :titleColor="cardOneContent.value.titleColor"
+        :subtitleColor="cardOneContent.value.subtitleColor"
       />
 
-      <IndexModel class="absolute h-screen w-screen bottom-0 left-0" />
-      <!-- absolute bottom-0 md:right-0 -right-40 overflow-x-hidden -->
+      <EarthSatModel class="absolute h-screen w-screen bottom-0 left-0" />
     </div>
-
-    <!-- :side-link="{ text: 'all', link: '/projects' }"  #24aab0 -->
     <div class="relative">
-      <PageLayout title="Projects" subtitle="featured" class="bg-amber-600">
+      <PageLayout
+        title="Projects"
+        subtitle="featured"
+        class="bg-amber-600"
+        background-color="rgba(217, 119, 6, 1)"
+      >
         <HorizontalContainer
           end-scroll-text="All Projects"
           link-to-rest="/projects/"
@@ -51,7 +54,6 @@ const { fetch, fetchState } = useFetch(async () => {
             class="news-scroll__container"
           />
         </HorizontalContainer>
-        <!-- <SkyModel class="absolute h-screen w-screen bottom-0 left-0" /> -->
       </PageLayout>
     </div>
     <PageLayout title="Skills."> TEST </PageLayout>
