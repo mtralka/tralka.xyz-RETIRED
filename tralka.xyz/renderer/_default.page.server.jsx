@@ -1,8 +1,7 @@
-import ReactDOMServer from "react-dom/server";
 import React from "react";
+import ReactDOMServer from "react-dom/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr";
 import { PageShell } from "./PageShell";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
-import logoUrl from "./logo.svg";
 
 export { render };
 // See https://vite-plugin-ssr.com/data-fetching
@@ -16,16 +15,17 @@ async function render(pageContext) {
     </PageShell>
   );
 
+  // <link rel="icon" href="${logoUrl}" />
   // See https://vite-plugin-ssr.com/html-head
   const { documentProps } = pageContext;
-  const title = (documentProps && documentProps.title) || "Vite SSR app";
-  const desc = (documentProps && documentProps.description) || "App using Vite + vite-plugin-ssr";
+  const title = (documentProps && documentProps.title) || "Matthew Tralka";
+  const desc = (documentProps && documentProps.description) || "Matthew Tralka";
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="${logoUrl}" />
+        <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3Ctext%20x='0'%20y='14'%3E🛰️%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <title>${title}</title>

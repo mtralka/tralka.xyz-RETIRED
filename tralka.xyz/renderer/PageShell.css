@@ -1,19 +1,7 @@
 /* This CSS is common to all pages */
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-* {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-}
+/* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
 
-.navitem {
-  padding: 3px 10px;
-}
-.navitem.is-active {
-  background-color: #eee;
-}
+body {
+  font-family: "Work Sans", sans-serif;
+} */
