@@ -1,2 +1,2 @@
-# NewTralka.xyz
+# Tralka.xyz
  
