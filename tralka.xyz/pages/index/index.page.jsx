@@ -1,6 +1,7 @@
 import React from "react";
-import EarthSatScene from "../../components/EarthSatScene";
-import PageTitleSubtitleLayout from "../../components/PageSubtitleTitleLayout";
+import EarthSatScene from "./EarthSatScene";
+import PageTitleSubtitleLayout from "./PageSubtitleTitleLayout";
+
 
 export { Page };
 

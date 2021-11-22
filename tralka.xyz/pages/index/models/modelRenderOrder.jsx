@@ -9,6 +9,11 @@ export default function RenderOrder() {
   }, [gl]);
 
   useFrame(() => {
+
+    camera.layers.set(2); // Globe
+    gl.render(scene, camera);
+    gl.clearDepth();
+
     camera.layers.set(1); // Globe
     gl.render(scene, camera);
     gl.clearDepth();
@@ -16,6 +21,8 @@ export default function RenderOrder() {
     camera.layers.set(0); // Everything else
     gl.render(scene, camera);
     gl.clearDepth();
+
+   
   }, 1);
 
   return <></>;
