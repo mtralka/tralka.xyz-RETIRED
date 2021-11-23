@@ -18,7 +18,7 @@ export default function HorizontalContainer({children,...props}) {
         // }
 
         // less than one child width remaining on left side
-        // return remaining distance
+        // translate remaining distance
         if (Math.abs(offset) < childWidth && offset < 0){
             setOffset(offset + Math.abs(offset))
             return
@@ -31,7 +31,7 @@ export default function HorizontalContainer({children,...props}) {
         }
 
         // container moving left
-        // translate child with
+        // translate child width
         if (offset + (sign * childWidth) < scrollWidth && sign === 1){
             setOffset(offset + (sign * childWidth) + pxSpacing)
             return
