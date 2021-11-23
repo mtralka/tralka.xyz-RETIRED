@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-
+import Icon from "./Icon";
 export default function HorizontalContainer({children,...props}) {
 
     const container = useRef();
@@ -52,22 +52,44 @@ export default function HorizontalContainer({children,...props}) {
     return (
       <>
         <div display="flex" flex="col" justify="items-center">
-            <div display="flex" justify="evenly items-center" space="x-3" align="self-end" p="b-8 r-8">
+            {/* <div display="flex" justify="evenly items-center" space="x-3" align="self-end" p="b-8 r-8">
                 <p display="flex" align="items-center">
                     See all
                 </p>
-                <div w="min-10" h="min-10" p="1" bg="blue-400" onClick={() => handleShift(1)}>
-                    {/* <Icon name="bi:arrow-left-circle-fill" w="full" h="full"   /> */}
+                <div w="min-10" h="min-10" p="1" onClick={() => handleShift(1)}>
+                    <Icon name="bi:arrow-left-circle-fill" w="full" h="full"   />
                 </div>
-                <div w="min-10" h="min-10" p="1" bg="blue-400" onClick={() => handleShift(-1)}>
-                    {/* <Icon name="bi:arrow-right-circle-fill" w="full" h="full"  /> */}
+                <div w="min-10" h="min-10" p="1" onClick={() => handleShift(-1)}>
+                    <Icon name="bi:arrow-right-circle-fill" w="full" h="full"  />
                 </div>
-                {/* onClick={() => handleShift(-1)} */}
-            </div> 
+            </div>  */}
             <div overflow="hidden">
-            <div ref={container} style={style} w="max-full full"  display="flex" flex="row" space="x-6">
-                {children}
+                <div ref={container} style={style} w="max-full full"  display="flex" flex="row" space="x-6">
+                    {children}
+                </div>
             </div>
+            <div
+                display="flex"
+                align="items-center"
+                justify="center"
+                m="t-10"
+                space="x-6 md:x-2"
+            >
+                <button
+                    w="min-10" h="min-10"
+                    aria-label="Scroll left"
+                    onClick={() => handleShift(1)}
+                >
+                    <Icon name="ic:outline-keyboard-arrow-left" w="full" h="full"   />
+                </button>
+
+                <button
+                    w="min-10" h="min-10"
+                    aria-label="Scroll right"
+                    onClick={() => handleShift(-1)}
+                >
+                    <Icon name="ic:outline-keyboard-arrow-right" w="full" h="full"  />       
+                </button>
             </div>
         </div>
         
