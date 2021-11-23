@@ -6,8 +6,8 @@ source: https://sketchfab.com/models/4cf892ee33b94978a3b70309bbc2a76f
 title: EOES satellite Landsat 8 clean topo
 */
 import { useGLTF } from '@react-three/drei';
-import React, { useRef, useEffect} from 'react';
-import { extend, useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
+import React, { useEffect, useRef } from 'react';
 
 export default function Model({satRotateSpeed, ...props }) {
 
@@ -16,6 +16,7 @@ export default function Model({satRotateSpeed, ...props }) {
 
   useEffect(() => {
     group.current.rotation.z = Math.PI
+    group.current.rotation.y = .002
   }, null);
 
   useFrame((_, dt) => {
@@ -62,7 +63,7 @@ export default function Model({satRotateSpeed, ...props }) {
           <mesh geometry={nodes.Cylinder001_0.geometry} material={nodes.Cylinder001_0.material}  layers={2} />
         </group>
         <group position={[-0.16, 1.87, 0]} rotation={[0, -Math.PI / 2, 0]} scale={0.2}>
-          <ambientLight  intensity={1.3}  />
+          <ambientLight  intensity={2.3} scale={0.2} layers={2} />
           <mesh geometry={nodes.Cylinder_0.geometry} material={materials.gold} layers={2}/>
           <mesh geometry={nodes.Cylinder_1.geometry} material={nodes.Cylinder_1.material} layers={2}  />
         </group>

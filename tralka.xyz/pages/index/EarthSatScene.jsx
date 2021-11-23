@@ -40,11 +40,14 @@ export default function EarthSatScene() {
               <Halo  color={"#0000ff"} radius={radius} />
               <Lights speed={lightSpeed}/>
             </group>
-            <SatOrbit orbitSpeed={satSpeed}>
-              <Landsat position={[orbitRadius,0,0]} scale={[.1, .1, .1]} satRotateSpeed={satRotateSpeed}/>
-              <directionalLight castShadow intensity={0.6} layers={2} />
-              <ambientLight  intensity={1.3} layers={2} />
-            </SatOrbit>
+            <Suspense fallback={null}>
+              <SatOrbit orbitSpeed={satSpeed}>
+
+                <Landsat position={[orbitRadius,0,0]} scale={[.1, .1, .1]} satRotateSpeed={satRotateSpeed}/>
+                <directionalLight castShadow intensity={1.0} layers={2} />
+                <ambientLight  intensity={1.3} layers={2} />
+              </SatOrbit>
+            </Suspense>
           </group>
           <RenderOrder />
           <OrbitControls enableRotate={false} enablePan={false} enableZoom={false}  />

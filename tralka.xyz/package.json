@@ -7,6 +7,7 @@
     "server:prod": "cross-env NODE_ENV=production node ./server"
   },
   "dependencies": {
+    "@iconify/iconify": "^2.1.0",
     "@react-three/drei": "^7.22.4",
     "@react-three/fiber": "^7.0.19",
     "@vitejs/plugin-react": "^1.0.4",
@@ -20,5 +21,9 @@
     "vite-plugin-ssr": "^0.3.31",
     "vite-plugin-windicss": "^1.5.1",
     "windicss": "^3.2.1"
+  },
+  "devDependencies": {
+    "@iconify/json": "^1.1.432",
+    "vite-plugin-purge-icons": "^0.7.0"
   }
 }
