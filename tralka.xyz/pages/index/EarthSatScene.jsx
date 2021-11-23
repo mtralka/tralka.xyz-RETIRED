@@ -18,7 +18,7 @@ export default function EarthSatScene() {
   const eartSpeed = 0.008
   const satSpeed = 0.2
   const orbitRadius = 1.2
-  const satRotateSpeed = 0.01
+  const satRotateSpeed = 0.04
   
   return (
     <div w="full" h="full">
@@ -46,6 +46,7 @@ export default function EarthSatScene() {
                 <Landsat position={[orbitRadius,0,0]} scale={[.1, .1, .1]} satRotateSpeed={satRotateSpeed}/>
                 <directionalLight castShadow intensity={1.0} layers={2} />
                 <ambientLight  intensity={1.3} layers={2} />
+                <ambientLight  intensity={1.3}  />
               </SatOrbit>
             </Suspense>
           </group>

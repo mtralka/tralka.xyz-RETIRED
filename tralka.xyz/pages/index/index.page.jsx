@@ -20,10 +20,10 @@ function Page() {
           </PageTitleSubtitleLayout>
       </section>
       {/* INDEX PROJECTS */}
-      <section bg="amber-600" text="black">
+      <section bg="amber-600 green-900 light-blue-700" text="black">
       <PageTitleSubtitleLayout
         title="Projects"
-        subtitle="Featured">
+        subtitle="">
           <HorizontalContainer w="full" h="full">
               <HorizontalCard subtitle="SUBTITLE" title="EOPlatform" link="text.com"></HorizontalCard>
               <HorizontalCard subtitle="SUBTITLE" title="EOPlatform" link="http://www.github.com"></HorizontalCard>
@@ -36,11 +36,12 @@ function Page() {
       </section>
 
       {/* INDEX SKILLS */}
-      <section bg="red-600" text="black">
+      {/* green-900 purple-800 light-blue-700 */}
+      <section bg=" green-900" text="black">
       <PageTitleSubtitleLayout
         title="Skills"
         >
-          <div w="full" h="full" bg="blue-500">
+          <div w="full" h="full" >
               ss
           </div>
 
