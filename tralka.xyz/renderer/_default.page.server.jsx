@@ -5,7 +5,7 @@ import { PageShell } from "./PageShell";
 
 export { render };
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ["pageProps", "urlPathname"];
+export const passToClient = ["pageProps", "urlPathname", "routeParams"];
 
 async function render(pageContext) {
   const { Page, pageProps } = pageContext;

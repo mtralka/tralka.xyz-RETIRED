@@ -65,12 +65,13 @@ function PageShell({ pageContext, children }) {
 function Content({ children }) {
   return (
     <div
-      // style={{
-      //   padding: 20,
-      //   paddingBottom: 50,
-      //   borderLeft: "2px solid #eee",
-      //   minHeight: "100vh",
-      // }}
+      // h="min-screen"
+      style={{
+        // padding: 20,
+        // paddingBottom: 50,
+        // borderLeft: "2px solid #eee",
+        minHeight: "100vh",
+      }}
     >
       {children}
     </div>
