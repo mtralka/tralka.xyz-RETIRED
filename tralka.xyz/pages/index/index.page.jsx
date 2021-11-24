@@ -2,7 +2,7 @@ import React from "react";
 import HorizontalCard from "../../components/HorizontalCard";
 import HorizontalContainer from "../../components/HorizontalContainer";
 import EarthSatScene from "./EarthSatScene";
-import PageTitleSubtitleLayout from "./PageSubtitleTitleLayout";
+import PageTitleSubtitleLayout from "../../components/PageSubtitleTitleLayout";
 
 export { Page };
 
