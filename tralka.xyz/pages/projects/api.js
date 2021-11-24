@@ -1,7 +1,7 @@
-const PROJECT_PATH = "../../content/";
+const PROJECT_PATH = "../../content/projects/";
 
 export const getAllProjects = async () => {
-  const projectModules = import.meta.glob("/content/*.md");
+  const projectModules = import.meta.glob("/content/projects/*.md");
   const projects = [];
 
   for (const path in projectModules) {
