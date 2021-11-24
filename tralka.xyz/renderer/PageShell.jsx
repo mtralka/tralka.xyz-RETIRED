@@ -1,7 +1,9 @@
 import React from "react";
+// import { Link } from "./Link";
+import { slide as Menu } from 'react-burger-menu';
+import { menuItems } from "../content/core.json";
 import "./PageShell.css";
 import { PageContextProvider } from "./usePageContext";
-// import { Link } from "./Link";
 
 export { PageShell };
 
@@ -22,9 +24,14 @@ function PageShell({ pageContext, children }) {
             </Sidebar>
             <Content>{children}</Content>
           </Layout> */}
+          <Sidebar/>
           <div m="auto">
-            <Content>{children}</Content>
+          
+          <Content>{children}</Content>
+          
+          
           </div>
+          
         </div>
       </PageContextProvider>
     </React.StrictMode>
@@ -45,22 +52,67 @@ function PageShell({ pageContext, children }) {
 //   );
 // }
 
-// function Sidebar({ children }) {
-//   return (
-//     <div
-//       style={{
-//         padding: 20,
-//         flexShrink: 0,
-//         display: "flex",
-//         flexDirection: "column",
-//         alignItems: "center",
-//         lineHeight: "1.8em",
-//       }}
-//     >
-//       {children}
-//     </div>
-//   );
-// }
+function Sidebar() {
+  const styles = {
+    bmBurgerButton: {
+      position: 'fixed',
+      width: '36px',
+      height: '30px',
+      right: '36px',
+      top: '36px'
+    },
+    bmBurgerBars: {
+      background: '#373a47'
+    },
+    bmBurgerBarsHover: {
+      background: '#a90000'
+    },
+    bmCrossButton: {
+      height: '24px',
+      width: '24px'
+    },
+    bmCross: {
+      background: '#bdc3c7'
+    },
+    bmMenuWrap: {
+      position: 'fixed',
+      height: '100%'
+    },
+    bmMorphShape: {
+      fill: '#373a47'
+    },
+    bmItem: {
+      display: 'flex'
+    },
+    bmOverlay: {
+      background: 'rgba(0, 0, 0, 0.3)'
+    }
+  }
+  return (
+    <>
+      <Menu right
+        styles={styles}
+        width={ 200 }
+        itemListClassName={ "flex flex-col space-y-3 items-end md:items-start" }
+        menuClassName={ "bg-green-900 px-10 pt-10" }
+      >
+        {menuItems.map((item) => 
+          <a
+            href={item.link}
+            key={item.link}
+            h="min-20"
+            align="items-center"
+            text="2xl"
+            font="bold"
+          >
+            {item.name}
+          </a>
+        )
+        }
+      </Menu>
+    </>
+  );
+}
 
 function Content({ children }) {
   return (

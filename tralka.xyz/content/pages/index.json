@@ -12,6 +12,8 @@
   "skillCard": {
     "title": "Skills",
     "subtitle": "",
-    "bgColor": "green-900"
+    "bgColor": "green-900",
+    "mobileLimit": 4,
+    "limit" : 11
   }
 }

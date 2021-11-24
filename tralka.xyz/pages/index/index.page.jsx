@@ -1,6 +1,7 @@
 import { landing, projectCard, skillCard } from "@content/pages/index.json";
 import skills from "@content/skills.json";
 import React from "react";
+import { useMediaQuery } from 'react-responsive';
 import CondensedCardIcon from "../../components/CondensedCardIcon";
 import HorizontalCard from "../../components/HorizontalCard";
 import HorizontalContainer from "../../components/HorizontalContainer";
@@ -9,7 +10,11 @@ import EarthSatScene from "./EarthSatScene";
 
 export { Page };
 
+
+
 function Page({projectAttrs}) {
+
+  const isMobile = useMediaQuery({query: '(max-width: 768px'})
 
   return (
     <>
@@ -25,7 +30,7 @@ function Page({projectAttrs}) {
       </section>
 
       {/* PROJECTS */}
-      <section bg={projectCard.bgColor} text="black">
+      <section bg={projectCard.bgColor || light-blue-700} text="black">
         <PageTitleSubtitleLayout
           title={projectCard.title}
           subtitle={projectCard.subtitle}
@@ -41,29 +46,46 @@ function Page({projectAttrs}) {
       </section>
 
       {/* SKILLS */}
-      <section bg={skillCard.bgColor} text="black">
-      <PageTitleSubtitleLayout
-        title={skillCard.title}
-        subtitle={skillCard.subtitle}
-        w="max-7xl" m="x-auto"
-        >
-        <div display="grid" grid="cols-1 sm:cols-2 md:cols-3 lg:cols-4 gap-4" m="auto" align="items-center">
-          {skills.map((skill) =>
-              <div
-                display="flex"
-                align="items-center"
-                justify="center"
-                > 
-                <CondensedCardIcon
-                  title={skill.name}
-                  icon={skill.icon}
+      <section bg={skillCard.bgColor || green-900} text="black">
+        <PageTitleSubtitleLayout
+          title={skillCard.title}
+          subtitle={skillCard.subtitle}
+          w="max-7xl" m="x-auto"
+          >
+          <div display="grid" grid="cols-1 sm:cols-2 md:cols-3 lg:cols-4 gap-4" m="auto" align="items-center">
+            {skills.slice(0, isMobile ? skillCard.mobileLimit : skillCard.limit).map((skill) =>
+                <div
+                  display="flex"
+                  align="items-center"
+                  justify="center"
                   key={skill.name}
-                  h="22 md:18 min-12"
-                  w="2/3 sm:52 md:58 min-44"
+                  > 
+                  <CondensedCardIcon
+                    title={skill.name}
+                    icon={skill.icon}
+                    h="20 md:18 min-12"
+                    w="2/3 sm:52 md:58 min-44"
+                  />
+                </div>
+                )}
+
+            { (isMobile || skills.length > skillCard.limit) && 
+            <div
+              display="flex"
+              align="items-center"
+              justify="center"
+            > 
+              <a
+                href="/skills"
+                h="20 md:18 min-12"
+                w="2/3 sm:52 md:58 min-44">
+                <CondensedCardIcon
+                  title="See all skils"
                 />
-              </div>
-              )}
-        </div>
+              </a>
+            </div>
+            }
+          </div>
         </PageTitleSubtitleLayout>
       </section>
     </>

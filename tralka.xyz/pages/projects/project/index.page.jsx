@@ -18,7 +18,7 @@ function Page({ attributes, html}) {
         {/* BOX */}
         <div
           p="4"
-          m="x-2 t-10 b-16 md:x-10"
+          m="x-2 t-10 md:t-22 b-16 md:x-10"
           space="y-12"
           overflow="hidden"
           bg="gray-100"
