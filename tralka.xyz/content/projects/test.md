@@ -7,8 +7,9 @@ links:
   - text: "Github"
     icon: "mdi:github"
     link: "www.google.com"
-description: Remote sensing made easysss
+subtitle: Remote sensing made easysss
 slug: test
+link: /projects/test
 ---
 
 <img src="https://github.com/mtralka/EOPlatform/raw/main/images/logo.jpg" alt="EOP Logo" width="300" height="300" style="margin:auto">

@@ -1,12 +1,13 @@
 import React from "react";
 import HorizontalCard from "../../components/HorizontalCard";
 import HorizontalContainer from "../../components/HorizontalContainer";
-import EarthSatScene from "./EarthSatScene";
 import PageTitleSubtitleLayout from "../../components/PageSubtitleTitleLayout";
+import EarthSatScene from "./EarthSatScene";
 
 export { Page };
 
-function Page() {
+function Page({projectAttrs}) {
+
   return (
     <>
       {/* INDEX LANDING */}
@@ -25,11 +26,9 @@ function Page() {
         title="Projects"
         subtitle="">
           <HorizontalContainer w="full" h="full">
-              <HorizontalCard subtitle="SUBTITLE" title="EOPlatform" link="text.com"></HorizontalCard>
-              <HorizontalCard subtitle="SUBTITLE" title="EOPlatform" link="http://www.github.com"></HorizontalCard>
-              <HorizontalCard subtitle="SUBTITLE" title="EOPlatform" link="http://www.github.com"></HorizontalCard>
-              <HorizontalCard subtitle="SUBTITLE" title="EOPlatform" link="http://www.github.com"></HorizontalCard>
-              <HorizontalCard subtitle="SUBTITLE" title="EOPlatform" link="http://www.github.com"></HorizontalCard>
+            {projectAttrs.map((proj) => 
+              <HorizontalCard subtitle={proj.subtitle} title={proj.title} link={proj.link} key={proj.slug} />
+            )}
           </HorizontalContainer>
 
           </PageTitleSubtitleLayout>
