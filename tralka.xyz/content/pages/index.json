@@ -6,7 +6,8 @@
   "projectCard": {
     "title": "Projects",
     "subtitle": "",
-    "bgColor": "light-blue-700"
+    "bgColor": "light-blue-700",
+    "limit" : 4
   },
   "skillCard": {
     "title": "Skills",

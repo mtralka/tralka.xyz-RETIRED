@@ -1,10 +1,12 @@
+import { projectCard } from "@content/pages/index.json";
 import { getAllProjectAttributes } from "../projects/api";
 
 export { onBeforeRender };
 export { prerender };
 
 async function onBeforeRender() {
-  const projectAttrs = await getAllProjectAttributes();
+  const allProjectAttrs = await getAllProjectAttributes();
+  const projectAttrs = allProjectAttrs.slice(0, projectCard.limit);
   const pageProps = { projectAttrs };
   return {
     pageContext: {
@@ -14,7 +16,8 @@ async function onBeforeRender() {
 }
 
 async function prerender() {
-  const projectAttrs = await getAllProjectAttributes();
+  const allProjectAttrs = await getAllProjectAttributes();
+  const projectAttrs = allProjectAttrs.slice(0, projectCard.limit);
   return [
     {
       url: "/",
