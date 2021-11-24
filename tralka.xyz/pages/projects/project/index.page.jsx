@@ -4,8 +4,6 @@ import React from "react";
 export { Page };
 
 function Page({ attributes, html}) {
-  console.log()
-  // console.log(projectName)
   return (
     <>
       {/* BACKGROUND */}

@@ -1,11 +1,11 @@
+import { getAllProjects, getProjectData } from "../api";
+
 export { onBeforeRender };
 export { prerender };
 
-const PROJECT_PATH = "../../../content/";
-
 async function onBeforeRender(pageContext) {
   const { projectName } = pageContext.routeParams;
-  const { html, attributes } = await import(`${PROJECT_PATH}${projectName}.md`);
+  const { html, attributes } = await getProjectData(projectName);
   const pageProps = { projectName, attributes, html };
   return {
     pageContext: {
@@ -15,16 +15,8 @@ async function onBeforeRender(pageContext) {
 }
 
 async function prerender() {
-  const projectModules = import.meta.glob("/content/*.md");
-  const projects = [];
-  for (const path in projectModules) {
-    const content = await projectModules[path]();
-    projects.push({
-      path: path,
-      html: content.html,
-      attributes: content.attributes,
-    });
-  }
+  const projects = await getAllProjects();
+
   return [
     {
       url: "/projects",

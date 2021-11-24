@@ -3,11 +3,17 @@ import React from "react";
 
 export { Page };
 
-function Page({projects}) {
+function Page({projectAttrs}) {
+  
+  const projNames = projectAttrs.map((proj) => 
+    <p key={proj.slug}>
+      {proj.title}
+    </p>
+  )
   return (
     <>
-      PROJECT INDEX
-      {projects}
+      PROJECT NAMES
+      {projNames}
     </>
   );
 }
