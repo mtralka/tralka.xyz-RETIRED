@@ -22,7 +22,10 @@ function Page({projectAttrs}) {
       <section bg="black" text="white">
         <PageTitleSubtitleLayout
         title={landing.title}
-        subtitle={landing.subtitle}>
+        subtitle={landing.subtitle}
+        subtitleClasses="text-cool-gray-400"
+        >
+        
           <div pos="absolute bottom-0 right-0" w="full" h="full" cursor="">
             <EarthSatScene />
           </div>
