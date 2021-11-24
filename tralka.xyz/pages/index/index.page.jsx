@@ -50,6 +50,7 @@ function Page({projectAttrs}) {
         <PageTitleSubtitleLayout
           title={skillCard.title}
           subtitle={skillCard.subtitle}
+          subtitleClasses="text-cool-gray-400"
           w="max-7xl" m="x-auto"
           >
           <div display="grid" grid="cols-1 sm:cols-2 md:cols-3 lg:cols-4 gap-4" m="auto" align="items-center">
@@ -80,7 +81,7 @@ function Page({projectAttrs}) {
                 h="20 md:18 min-12"
                 w="2/3 sm:52 md:58 min-44">
                 <CondensedCardIcon
-                  title="See all skils"
+                  title="See all skills"
                 />
               </a>
             </div>
