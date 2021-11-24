@@ -1,6 +1,5 @@
 // import { attributes, html } from "@content/test.md";
 import React from "react";
-import Icon from "../../../components/Icon";
 import Pill from "../../../components/Pill";
 export { Page };
 
@@ -27,12 +26,25 @@ function Page({ attributes, html}) {
           w="max-7xl"
         >
           {/* ALL PROJECTS LINK */}
-          <a display="flex" align="items-center" space="x-1" href="/projects" text="hover:underline">
+          {/* <a display="flex" align="items-center" space="x-1" href="/projects" text="hover:underline">
             <Icon name="mdi:arrow-left-bold" w="6" h="6" />
             <p font="bold tracking-tighter" text="xl" >
               all projects
             </p>
-          </a>
+          </a> */}
+
+          <div display="flex" align="items-center" space="x-1" text="cool-gray-600" className="breadcrumb">
+            <a  href="/">
+              home
+            </a>
+            <a  href="/projects">
+              projects
+            </a>
+            <a href={`/projects/${attributes.slug}`}>
+              {attributes.title}
+            </a>
+          </div>
+
           {/* BOX CONTENT */}
           <div
             w="full max-5xl"

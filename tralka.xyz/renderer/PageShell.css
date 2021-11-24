@@ -6,3 +6,11 @@ body {
   /* font-family: "Work Sans", sans-serif; */
   font-family: "Outfit", sans-serif;
 }
+
+.breadcrumb *:not(:last-child)::after {
+  content: " / ";
+}
+
+.breadcrumb * {
+  @apply font-bold tracking-tighter text-lg hover:underline;
+}
