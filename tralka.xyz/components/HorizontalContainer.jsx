@@ -10,17 +10,11 @@ export default function HorizontalContainer({children,...props}) {
         const clientWidth = container.current.clientWidth
         const childWidth = container.current.firstChild.clientWidth
         const pxSpacing = 24
-        // already at left side
-        // do not translate
-        // if ((scrollWidth - clientWidth - offset) < 0){
-        //     console.log("WHEN DOES THIS")
-        //     return
-        // }
-
+       
         // less than one child width remaining on left side
         // translate remaining distance
         if (Math.abs(offset) < childWidth && offset < 0){
-            setOffset(offset + Math.abs(offset))
+            setOffset((prev) => prev + Math.abs(offset))
             return
         }
 
@@ -33,7 +27,7 @@ export default function HorizontalContainer({children,...props}) {
         // container moving left
         // translate child width
         if (offset + (sign * childWidth) < scrollWidth && sign === 1){
-            setOffset(offset + (sign * childWidth) + pxSpacing)
+            setOffset((prev) => prev + (sign * childWidth) + pxSpacing)
             return
         }
 
@@ -92,7 +86,6 @@ export default function HorizontalContainer({children,...props}) {
                 </button>
             </div>
         </div>
-        
       </>
     );
   }
