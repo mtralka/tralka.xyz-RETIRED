@@ -69,7 +69,9 @@ function Sidebar() {
     },
     bmCrossButton: {
       height: '36px',
-      width: '36px'
+      width: '36px',
+      marginRight: '20px',
+      marginTop: '20px'
     },
     bmCross: {
       background: '#bdc3c7',
@@ -94,7 +96,7 @@ function Sidebar() {
         styles={styles}
         width={ 200 }
         itemListClassName={ "flex flex-col space-y-3 items-end md:items-start" }
-        menuClassName={ "bg-cool-gray-600 px-10 pt-10" }
+        menuClassName={ "bg-cool-gray-600 px-10 pt-12" }
       >
         {menuItems.map((item) => 
           <a

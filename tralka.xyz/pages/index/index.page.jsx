@@ -70,7 +70,11 @@ function Page({projectAttrs}) {
                 </div>
                 )}
 
-            { (isMobile || skills.length > skillCard.limit) && 
+            {
+            ((isMobile && skills.length > skillCard.mobileLimit)
+            ||
+            (skills.length > skillCard.limit))
+            && 
             <div
               display="flex"
               align="items-center"
