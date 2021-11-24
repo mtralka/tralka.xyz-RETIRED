@@ -1,3 +1,4 @@
+import { landing, projectCard, skillCard } from "@content/pages/index.json";
 import React from "react";
 import HorizontalCard from "../../components/HorizontalCard";
 import HorizontalContainer from "../../components/HorizontalContainer";
@@ -10,41 +11,41 @@ function Page({projectAttrs}) {
 
   return (
     <>
-      {/* INDEX LANDING */}
+      {/* LANDING */}
       <section bg="black" text="white">
         <PageTitleSubtitleLayout
-        title="Remote Sensing Scientist"
-        subtitle="Matthew Tralka">
+        title={landing.title}
+        subtitle={landing.subtitle}>
           <div pos="absolute bottom-0 right-0" w="full" h="full" cursor="">
             <EarthSatScene />
-            </div>
-          </PageTitleSubtitleLayout>
+          </div>
+        </PageTitleSubtitleLayout>
       </section>
-      {/* INDEX PROJECTS */}
-      <section bg="amber-600 green-900 light-blue-700" text="black">
-      <PageTitleSubtitleLayout
-        title="Projects"
-        subtitle="">
+
+      {/* PROJECTS */}
+      <section bg={projectCard.bgColor} text="black">
+        <PageTitleSubtitleLayout
+          title={projectCard.title}
+          subtitle={projectCard.subtitle}>
           <HorizontalContainer w="full" h="full">
             {projectAttrs.map((proj) => 
               <HorizontalCard subtitle={proj.subtitle} title={proj.title} link={proj.link} key={proj.slug} />
             )}
+            <HorizontalCard subtitle="" title="See all projects" link="/projects/" key="/projects/" />
           </HorizontalContainer>
-
-          </PageTitleSubtitleLayout>
+        </PageTitleSubtitleLayout>
       </section>
 
-      {/* INDEX SKILLS */}
-      {/* green-900 purple-800 light-blue-700 */}
-      <section bg=" green-900" text="black">
+      {/* SKILLS */}
+      <section bg={skillCard.bgColor} text="black">
       <PageTitleSubtitleLayout
-        title="Skills"
+        title={skillCard.title}
+        subtitle={skillCard.subtitle}
         >
-          <div w="full" h="full" >
-              ss
-          </div>
-
-          </PageTitleSubtitleLayout>
+        <div w="full" h="full" >
+            ss
+        </div>
+        </PageTitleSubtitleLayout>
       </section>
     </>
   );

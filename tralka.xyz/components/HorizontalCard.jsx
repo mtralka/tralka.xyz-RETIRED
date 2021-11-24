@@ -24,7 +24,7 @@ const HorizontalCard = ({title, subtitle,link,...props}) => (
                     }
                     
                     {subtitle &&
-                        <p text="lg md:xl gray-800" font="medium">
+                        <p text="lg md:xl gray-800" font="light">
                         { subtitle}
                     </p>
                     }

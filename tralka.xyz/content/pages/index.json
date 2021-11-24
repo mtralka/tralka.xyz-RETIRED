@@ -1,0 +1,16 @@
+{
+  "landing": {
+    "title": "Remote Sensing Scientist",
+    "subtitle": "Matthew Tralka"
+  },
+  "projectCard": {
+    "title": "Projects",
+    "subtitle": "",
+    "bgColor": "light-blue-700"
+  },
+  "skillCard": {
+    "title": "Skills",
+    "subtitle": "",
+    "bgColor": "green-900"
+  }
+}
