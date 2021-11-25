@@ -1,6 +1,6 @@
 const PageTitleSubtitleLayout = ({subtitle, title, children, subtitleClasses, ...props}) => (
   <>
-    <div h="screen" w="full" z="50" p="l-10 md:l-20 t-26 md:t-52" flex="col" display="flex" {...props}>
+    <div h="screen" w="full" z="50" p="l-4 md:l-20 t-26 md:t-52" flex="col" display="flex" {...props}>
       <div max-w="sm md:xl" space="y-3" flex="shrink-0" z="50" >
         <p
           position="relative"
@@ -15,7 +15,7 @@ const PageTitleSubtitleLayout = ({subtitle, title, children, subtitleClasses, ..
           {title}
         </p>
       </div>
-      <div w="full" h="full" p="b-5 t-15 r-10 md:r-20" flex="shrink" >
+      <div w="full" h="full" p="b-5 t-15 r-4 md:r-20" flex="shrink" >
         {children}
       </div>
       
