@@ -9,7 +9,7 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Work Sans", "Montserrat", "Graphik", "sans-serif"],
+        sans: ["Outfit", "Roboto", "sans-serif"],
       },
     },
   },

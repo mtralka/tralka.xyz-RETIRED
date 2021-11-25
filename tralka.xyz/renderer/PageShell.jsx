@@ -11,46 +11,25 @@ function PageShell({ pageContext, children }) {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <div font="subpixel-antialiased">
-          {/* <Layout>
-            <Sidebar>
-              <Logo />
-              <Link className="navitem" href="/">
-                Home
-              </Link>
-              <Link className="navitem" href="/about">
-                About
-              </Link>
-            </Sidebar>
-            <Content>{children}</Content>
-          </Layout> */}
+        <Layout >
           <Sidebar/>
-          <div m="auto">
-          
           <Content>{children}</Content>
-          
-          
-          </div>
-          
-        </div>
+        </Layout>
       </PageContextProvider>
     </React.StrictMode>
   );
 }
 
-// function Layout({ children }) {
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         maxWidth: 900,
-//         margin: "auto",
-//       }}
-//     >
-//       {children}
-//     </div>
-//   );
-// }
+function Layout({ children }) {
+  return (
+    <div
+    font="subpixel-antialiased sans"
+    m="auto"
+    >
+      {children}
+    </div>
+  );
+}
 
 function Sidebar() {
   const styles = {
@@ -119,13 +98,7 @@ function Sidebar() {
 function Content({ children }) {
   return (
     <div
-      // h="min-screen"
-      style={{
-        // padding: 20,
-        // paddingBottom: 50,
-        // borderLeft: "2px solid #eee",
-        minHeight: "100vh",
-      }}
+      h="min-screen"
     >
       {children}
     </div>
