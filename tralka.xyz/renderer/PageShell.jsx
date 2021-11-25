@@ -1,7 +1,7 @@
 import React from "react";
-// import { Link } from "./Link";
 import { slide as Menu } from 'react-burger-menu';
-import { menuItems } from "../content/core.json";
+import Icon from "../components/Icon";
+import { footerItems, menuItems } from "../content/core.json";
 import "./PageShell.css";
 import { PageContextProvider } from "./usePageContext";
 
@@ -14,6 +14,7 @@ function PageShell({ pageContext, children }) {
         <Layout >
           <Sidebar/>
           <Content>{children}</Content>
+          <Footer/>
         </Layout>
       </PageContextProvider>
     </React.StrictMode>
@@ -105,29 +106,38 @@ function Content({ children }) {
   );
 }
 
-// function Footer() {
-//   return (
-//     <div
-//       h="min-screen"
-//     >
-//       {children}
-//     </div>
-//   );
-// }
-
-
-
-// function Logo() {
-//   return (
-//     <div
-//       style={{
-//         marginTop: 20,
-//         marginBottom: 10,
-//       }}
-//     >
-//       <a href="/">
-//         <img src={logo} height={64} width={64} alt="logo" />
-//       </a>
-//     </div>
-//   );
-// }
+const Footer = () => (
+    <div
+      w="screen"
+      h="min-14"
+      bg="white"
+      display="flex"
+      flex="col"
+      align="items-center"
+      justify="center"
+      space="y-4"
+      p="y-4"
+    >
+      <p
+        font="bold"  
+      >
+        {footerItems.text}
+      </p>
+      {
+        footerItems.icons &&
+        <div
+          space="x-3"
+          display="flex"
+          
+        >
+          {footerItems.icons.map((item) => 
+            <a href={item.link} key={item.link} p="1">
+              <Icon name={item.name} h="6" w="6"  />
+            </a>
+            
+          )}
+        </div>
+      }
+      
+    </div>
+  )

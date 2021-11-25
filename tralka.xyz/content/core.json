@@ -12,5 +12,18 @@
             "name" : "Skills",
             "link" : "/skills"
         }
-    ]
+    ],
+    "footerItems": {
+        "icons": [
+            {
+                "name" : "ion:logo-github",
+                "link" : "http://github.com/mtralka"
+            },
+            {
+                "name" : "carbon:email",
+                "link" : "/"
+            }
+        ],
+        "text": "Matthew Tralka"
+    }
 }

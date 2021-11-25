@@ -54,8 +54,10 @@ function Page({projectAttrs}) {
           title={skillCard.title}
           subtitle={skillCard.subtitle}
           subtitleClasses=""
-          w="max-7xl" m="x-auto"
+          w="max-7xl"
           h="auto"
+          m="x-auto"
+          
           >
           <div display="grid" grid="cols-1 sm:cols-2 md:cols-3 lg:cols-4 gap-4" m="auto" align="items-center">
             {skills.slice(0, isMobile ? skillCard.mobileLimit : skillCard.limit).map((skill) =>
