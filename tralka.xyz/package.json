@@ -1,6 +1,8 @@
 {
   "scripts": {
     "dev": "npm run server",
+    "dev:proxy": "npm run server && npx netlify-cms-proxy-server",
+    "proxy": "npx netlify-cms-proxy-server",
     "prod": "npm run build && npm run server:prod",
     "build": "vite build && vite build --ssr",
     "build:prerender": "vite build && vite build --ssr && vite-plugin-ssr prerender",
