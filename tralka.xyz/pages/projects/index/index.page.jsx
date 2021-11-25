@@ -22,16 +22,22 @@ function Page({projectAttrs}) {
           w="max-7xl" m="x-auto"
           h="min-screen"
           >
-          <div display="grid" grid="cols-1 sm:cols-2 md:cols-3 lg:cols-4 gap-4" m="auto" align="items-center">
+          <div display="flex" flex="wrap" grid="gap-4" m="auto" align="items-center">
             {projectAttrs.map((proj) =>
-                <div
-                  display="flex"
-                  align="items-center"
-                  justify="center"
-                  key={proj.slug}
-                  > 
-                  <HorizontalCard subtitle={proj.subtitle} title={proj.title} link={proj.link}  />
-                </div>
+                // <div
+                //   display="flex"
+                //   align="items-center"
+                //   justify="center"
+                  
+                //   > 
+                  <HorizontalCard
+                    subtitle={proj.subtitle}
+                    title={proj.title}
+                    link={proj.link}
+                    key={proj.slug}
+                    w="full sm:auto"
+                    flex="grow md:grow-0"/>
+                // </div>
                 )}
           </div>
         </PageTitleSubtitleLayout>

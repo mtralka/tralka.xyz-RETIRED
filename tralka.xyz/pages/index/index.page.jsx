@@ -14,7 +14,7 @@ export { Page };
 
 function Page({projectAttrs}) {
 
-  const isMobile = useMediaQuery({query: '(max-width: 768px'})
+  const isMobile = useMediaQuery({query: '(max-width: 750px'})
 
   return (
     <>

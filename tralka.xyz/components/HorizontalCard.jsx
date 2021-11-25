@@ -2,11 +2,11 @@
 
 const HorizontalCard = ({title, subtitle,link,...props}) => (
     <>
-        <a href={link} w="full max-full sm:max-[26rem] sm:[26rem]" flex="shrink-0">
+        <a href={link} w="full max-full sm:max-[26rem] sm:[26rem]" flex="shrink-0" {...props}>
             <div
                 bg="white opacity-40"
                 h="auto md:40 min-28"
-                w="full max-full md:max-[26rem] md:[26rem]"
+                // w="full max-full md:max-[26rem] md:[26rem]"
                 border="rounded-2xl"
                 overflow="hidden"
                 p="y-6 r-3 l-4"

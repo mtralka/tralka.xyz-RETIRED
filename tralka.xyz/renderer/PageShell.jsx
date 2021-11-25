@@ -105,6 +105,18 @@ function Content({ children }) {
   );
 }
 
+// function Footer() {
+//   return (
+//     <div
+//       h="min-screen"
+//     >
+//       {children}
+//     </div>
+//   );
+// }
+
+
+
 // function Logo() {
 //   return (
 //     <div
