@@ -15,7 +15,7 @@ function Page({}) {
         <PageTitleSubtitleLayout
           title={skillCard.title}
           subtitle="All"
-          subtitleClasses="text-cool-gray-400"
+          subtitleClasses=""
           w="max-7xl" m="x-auto"
           h="min-screen"
           >

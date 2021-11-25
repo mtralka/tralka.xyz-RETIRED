@@ -53,7 +53,7 @@ function Page({projectAttrs}) {
         <PageTitleSubtitleLayout
           title={skillCard.title}
           subtitle={skillCard.subtitle}
-          subtitleClasses="text-cool-gray-400"
+          subtitleClasses=""
           w="max-7xl" m="x-auto"
           >
           <div display="grid" grid="cols-1 sm:cols-2 md:cols-3 lg:cols-4 gap-4" m="auto" align="items-center">

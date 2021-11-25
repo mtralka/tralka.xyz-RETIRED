@@ -5,13 +5,13 @@
   },
   "projectCard": {
     "title": "Projects",
-    "subtitle": "",
+    "subtitle": "selected",
     "bgColor": "light-blue-700",
     "limit" : 4
   },
   "skillCard": {
     "title": "Skills",
-    "subtitle": "selected",
+    "subtitle": "top",
     "bgColor": "green-900",
     "mobileLimit": 4,
     "limit" : 11
