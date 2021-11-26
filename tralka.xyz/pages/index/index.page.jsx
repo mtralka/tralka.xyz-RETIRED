@@ -25,8 +25,11 @@ function Page({projectAttrs}) {
         subtitle={landing.subtitle}
         subtitleClasses="text-cool-gray-400"
         >
+          <div pos="absolute bottom-0 right-0" w="min-full" h="min-full" z="50">
+            
+          </div>
         
-          <div pos="absolute bottom-0 right-0" w="full" h="full" cursor="">
+          <div pos="absolute bottom-0 right-0" w="full" h="full" z="40">
             <EarthSatScene />
           </div>
         </PageTitleSubtitleLayout>

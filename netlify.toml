@@ -1,0 +1,11 @@
+
+[build]
+    base = "tralka.xyz/"
+    publish = "dist/client/"
+    command = "npm run build:prerender"
+[context.staging]
+    command = "npm run build:prerender"
+[[redirects]]
+    from = "/admin"
+    to = "/admin/index.html"
+    force = true
