@@ -2,7 +2,6 @@
 title: EOPlatform
 skills:
   - Python
-  - etst4
 links:
   - text: "Github"
     icon: "mdi:github"
