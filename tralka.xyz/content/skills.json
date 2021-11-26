@@ -9,8 +9,8 @@
       "icon": "logos:javascript"
     },
     {
-      "name": "Docker",
-      "icon": "logos:docker-icon"
+      "name": "Typescript",
+      "icon": "logos:typescript-icon"
     },
     {
       "name": "HTML",
@@ -25,8 +25,72 @@
       "icon": "vscode-icons:file-type-pgsql"
     },
     {
+      "name": "QGIS",
+      "icon": "simple-icons:qgis"
+    },
+    {
+      "name": "Docker",
+      "icon": "logos:docker-icon"
+    },
+    {
       "name": "Conda",
       "icon": "vscode-icons:file-type-conda"
+    },
+    {
+      "icon": "icon-park:map-draw",
+      "name": "ArcGIS Pro"
+    },
+    {
+      "name": "Git",
+      "icon": "mdi:git"
+    },
+    {
+      "icon": "vscode-icons:file-type-affinitydesigner",
+      "name": "Affinity Photo"
+    },
+    {
+      "icon": "logos:vue",
+      "name": "Vue (2 & 3)"
+    },
+    {
+      "name": "React",
+      "icon": "logos:react"
+    },
+    {
+      "icon": "logos:netlify",
+      "name": "Netlify"
+    },
+    {
+      "name": "Flask & FastAPI",
+      "icon": "logos:flask"
+    },
+    {
+      "icon": "logos:tailwindcss-icon",
+      "name": "Tailwind & Windi CSS"
+    },
+    {
+      "icon": "logos:nuxt-icon",
+      "name": "NuxtJS"
+    },
+    {
+      "icon": "vscode-icons:file-type-aws",
+      "name": "AWS (EB, S3, CF, RDS, R53)"
+    },
+    {
+      "icon": "noto:globe-showing-americas",
+      "name": "GDAL"
+    },
+    {
+      "icon": "logos:numpy",
+      "name": "NumPy"
+    },
+    {
+      "icon": "simple-icons:scikitlearn",
+      "name": "SKLearn & SKImage"
+    },
+    {
+      "icon": "file-icons:leaflet",
+      "name": "DeckGL & LeafletJS"
     }
   ]
 }
