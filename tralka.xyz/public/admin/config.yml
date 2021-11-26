@@ -11,7 +11,7 @@ collections:
     files:
       - label: "Index"
         name: "index"
-        file: "content/pages/index.json"
+        file: "tralka.xyz/content/pages/index.json"
         fields:
           - label: Landing
             name: landing
@@ -66,7 +66,7 @@ collections:
     files:
       - label: "Core info"
         name: "core"
-        file: "content/core.json"
+        file: "tralka.xyz/content/core.json"
         fields:
           - label: Menu Items
             name: menuItems
@@ -99,7 +99,7 @@ collections:
                 widget: string
       - label: "Skills"
         name: "skills"
-        file: "content/skills.json"
+        file: "tralka.xyz/content/skills.json"
         fields:
           - label: Skills
             summary: "{{fields.name}}"
@@ -114,7 +114,7 @@ collections:
                 widget: string
   - label: Projects
     name: projects
-    folder: "/content/projects/"
+    folder: "tralka.xyz/content/projects/"
     format: "frontmatter"
     create: true
     slug: "{{title}}"
