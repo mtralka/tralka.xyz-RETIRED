@@ -9,6 +9,8 @@ import Lights from "./models/Lights";
 import RenderOrder from "./models/modelRenderOrder";
 import SatOrbit from "./models/SatOrbit";
 
+// Earth PBR code modified from Faraz Shaikh - @FarazzShaikh
+
 export default function EarthSatScene() {
 
   const position = [.75,-.5,0]
