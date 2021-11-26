@@ -1,29 +1,33 @@
 {
-    "menuItems": [
-        {
-            "name" : "Home",
-            "link" : "/"
-        },
-        {
-            "name" : "Projects",
-            "link" : "/projects"
-        },
-        {
-            "name" : "Skills",
-            "link" : "/skills"
-        }
-    ],
-    "footerItems": {
-        "icons": [
-            {
-                "name" : "ion:logo-github",
-                "link" : "http://github.com/mtralka"
-            },
-            {
-                "name" : "carbon:email",
-                "link" : "mailto:matthew@tralka.xyz"
-            }
-        ],
-        "text": "Matthew Tralka"
+  "menuItems": [
+    {
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "name": "Projects",
+      "link": "/projects"
+    },
+    {
+      "name": "Skills",
+      "link": "/skills"
     }
+  ],
+  "footerItems": {
+    "icons": [
+      {
+        "name": "ion:logo-github",
+        "link": "http://github.com/mtralka"
+      },
+      {
+        "name": "carbon:email",
+        "link": "mailto:matthew@tralka.xyz"
+      },
+      {
+        "name": "logos:linkedin-icon",
+        "link": "https://www.linkedin.com/in/matthewtralka/"
+      }
+    ],
+    "text": "Matthew Tralka"
+  }
 }
