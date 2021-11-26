@@ -8,20 +8,160 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: 'Index Sections'
-    name: 'index'
+  - label: "Pages"
+    name: "pages"
     files:
-      - label: 'Card One'
-        name: 'index-card-one'
-        file: 'tralka.xyz/content/index/index-card-one.yml'
+      - label: "Index"
+        name: "index"
+        file: "content/pages/index.json"
         fields:
-          - label: Title
-            name: titleOptions
+          - label: Landing
+            name: landing
+            summary: Landing section
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Subtitle
+                name: subtitle
+                widget: string
+          - label: Project Card
+            name: projectCard
+            summary: Project section
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Subtitle
+                name: subtitle
+                widget: string
+              - label: Background Color
+                name: bgColor
+                widget: string
+              - label: Limit
+                name: limit
+                widget: number
+          - label: Skill Card
+            name: skillCard
+            summary: Skill section
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Subtitle
+                name: subtitle
+                widget: string
+              - label: Background Color
+                name: bgColor
+                widget: string
+              - label: Mobile limit
+                name: mobileLimit
+                widget: number
+              - label: Limit
+                name: limit
+                widget: number
+  - label: "General Info"
+    name: "general"
+    files:
+      - label: "Core info"
+        name: "core"
+        file: "content/core.json"
+        fields:
+          - label: Menu Items
+            name: menuItems
+            summary: "{{fields.name}}"
             widget: list
             fields:
-              - label: Option
-                name: option
+              - label: Icon Name
+                name: name
                 widget: string
-          - label: Subtitle
-            name: subtitle
+              - label: Link
+                name: link
+                widget: string
+          - label: Footer Items
+            name: footerItems
+            summary: "{{fields.name}}"
+            widget: object
+            fields:
+              - label: Icons
+                name: icons
+                widget: list
+                fields:
+                  - label: Icon Name
+                    name: name
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+              - label: Footer Text
+                name: text
+                widget: string
+      - label: "Skills"
+        name: "skills"
+        file: "content/skills.json"
+        fields:
+          - label: Skills
+            summary: "{{fields.name}}"
+            name: skills
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Icon Name
+                name: icon
+                widget: string
+  - label: Projects
+    name: projects
+    folder: "/content/projects/"
+    format: "frontmatter"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Subtitle
+        name: subtitle
+        widget: string
+      - label: Skill(s)
+        name: skills
+        summary: "{{field.name}}"
+        widget: "list"
+        field:
+          label: Skill
+          name: skill
+          widget: relation
+          collection: general
+          file: "skills"
+          search_fields: ["skills.*.name"]
+          value_field: "skills.*.name"
+          display_fields: ["skills.*.name"]
+      - label: Links
+        summary: "{{fields.text}}"
+        name: links
+        widget: list
+        fields:
+          - label: Name
+            name: text
             widget: string
+          - label: Icon
+            name: icon
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        default: "{{title}}"
+      - label: Link
+        name: link
+        widget: string
+        default: "/projects/{{slug}}"
+      - label: Body
+        name: body
+        widget: markdown

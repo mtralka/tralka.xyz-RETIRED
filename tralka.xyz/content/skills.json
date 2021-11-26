@@ -1,26 +1,32 @@
-[
 {
-    "name": "Python",
-    "icon": "vscode-icons:file-type-python"
-},
-{
-    "name": "Javascript",
-    "icon": "logos:javascript"
-},
-{
-    "name": "Docker",
-    "icon": "logos:docker-icon"
-},
-{
-    "name": "HTML",
-    "icon": "vscode-icons:file-type-html"
-},
-{
-    "name": "CSS",
-    "icon": "vscode-icons:file-type-css"
-},
-{
-    "name": "SQL",
-    "icon": "vscode-icons:file-type-pgsql"
+  "skills": [
+    {
+      "name": "Python",
+      "icon": "vscode-icons:file-type-python"
+    },
+    {
+      "name": "Javascript",
+      "icon": "logos:javascript"
+    },
+    {
+      "name": "Docker",
+      "icon": "logos:docker-icon"
+    },
+    {
+      "name": "HTML",
+      "icon": "vscode-icons:file-type-html"
+    },
+    {
+      "name": "CSS",
+      "icon": "vscode-icons:file-type-css"
+    },
+    {
+      "name": "SQL",
+      "icon": "vscode-icons:file-type-pgsql"
+    },
+    {
+      "name": "Conda",
+      "icon": "vscode-icons:file-type-conda"
+    }
+  ]
 }
-]

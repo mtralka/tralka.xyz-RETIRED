@@ -26,6 +26,7 @@ function Layout({ children }) {
     <div
     font="subpixel-antialiased sans"
     m="auto"
+    overflow="x-hidden"
     >
       {children}
     </div>

@@ -1,5 +1,5 @@
 import { landing, projectCard, skillCard } from "@content/pages/index.json";
-import skills from "@content/skills.json";
+import { skills } from "@content/skills.json";
 import React from "react";
 import { useMediaQuery } from 'react-responsive';
 import CondensedCardIcon from "../../components/CondensedCardIcon";
