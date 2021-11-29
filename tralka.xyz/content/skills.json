@@ -13,6 +13,14 @@
       "icon": "logos:typescript-icon"
     },
     {
+      "icon": "logos:vue",
+      "name": "Vue (2 & 3)"
+    },
+    {
+      "icon": "noto:globe-showing-americas",
+      "name": "GDAL"
+    },
+    {
       "name": "HTML",
       "icon": "vscode-icons:file-type-html"
     },
@@ -21,40 +29,24 @@
       "icon": "vscode-icons:file-type-css"
     },
     {
-      "name": "SQL",
-      "icon": "vscode-icons:file-type-pgsql"
-    },
-    {
-      "name": "QGIS",
-      "icon": "simple-icons:qgis"
+      "icon": "vscode-icons:file-type-aws",
+      "name": "AWS (EB, S3, CF, RDS, R53)"
     },
     {
       "name": "Docker",
       "icon": "logos:docker-icon"
     },
     {
-      "name": "Conda",
-      "icon": "vscode-icons:file-type-conda"
-    },
-    {
-      "icon": "icon-park:map-draw",
-      "name": "ArcGIS Pro"
-    },
-    {
       "name": "Git",
       "icon": "mdi:git"
     },
     {
-      "icon": "vscode-icons:file-type-affinitydesigner",
-      "name": "Affinity Photo"
-    },
-    {
-      "icon": "logos:vue",
-      "name": "Vue (2 & 3)"
-    },
-    {
       "name": "React",
       "icon": "logos:react"
+    },
+    {
+      "name": "SQL",
+      "icon": "vscode-icons:file-type-pgsql"
     },
     {
       "icon": "logos:netlify",
@@ -73,12 +65,12 @@
       "name": "NuxtJS"
     },
     {
-      "icon": "vscode-icons:file-type-aws",
-      "name": "AWS (EB, S3, CF, RDS, R53)"
+      "name": "QGIS",
+      "icon": "simple-icons:qgis"
     },
     {
-      "icon": "noto:globe-showing-americas",
-      "name": "GDAL"
+      "icon": "icon-park:map-draw",
+      "name": "ArcGIS Pro"
     },
     {
       "icon": "logos:numpy",
@@ -91,6 +83,14 @@
     {
       "icon": "file-icons:leaflet",
       "name": "DeckGL & LeafletJS"
+    },
+    {
+      "name": "Conda",
+      "icon": "vscode-icons:file-type-conda"
+    },
+    {
+      "icon": "vscode-icons:file-type-affinitydesigner",
+      "name": "Affinity Photo"
     }
   ]
 }

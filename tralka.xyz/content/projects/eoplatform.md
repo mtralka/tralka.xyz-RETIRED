@@ -6,7 +6,7 @@ links:
   - text: "Github"
     icon: "mdi:github"
     link: "www.google.com"
-subtitle: Remote sensing made easys
+subtitle: Remote sensing made easy
 slug: eoplatform
 link: /projects/eoplatform
 ---
