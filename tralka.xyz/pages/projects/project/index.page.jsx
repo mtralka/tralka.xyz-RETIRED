@@ -1,4 +1,3 @@
-// import { attributes, html } from "@content/test.md";
 import React from "react";
 import Pill from "../../../components/Pill";
 export { Page };
@@ -79,6 +78,8 @@ function Page({ attributes, html}) {
               </div>
 
               <article
+                display="flex"
+                flex="col"
                 w="max-3xl"
                 p="x-1 md:x-0"
                 m="x-auto t-4"

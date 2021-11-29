@@ -1,3 +1,4 @@
+
 import '@purge-icons/generated';
 import React from "react";
 import ReactDOMServer from "react-dom/server";

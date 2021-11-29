@@ -1,7 +1,6 @@
 import '@purge-icons/generated';
 import React from "react";
 import ReactDOM from "react-dom";
-// import 'virtual:windi-devtools';
 import 'virtual:windi.css';
 import { getPage } from "vite-plugin-ssr/client";
 import { PageShell } from "./PageShell";
