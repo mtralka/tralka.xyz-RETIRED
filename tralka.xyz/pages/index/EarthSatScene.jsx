@@ -42,7 +42,7 @@ export default function EarthSatScene() {
               <Halo  color={"#0000ff"} radius={radius} />
               <Lights speed={lightSpeed}/>
             </group>
-            <Suspense fallback={null}>
+            
               <SatOrbit orbitSpeed={satSpeed}>
 
                 <Landsat position={[orbitRadius,0,0]} scale={[.1, .1, .1]} satRotateSpeed={satRotateSpeed}/>
@@ -50,7 +50,7 @@ export default function EarthSatScene() {
                 <ambientLight  intensity={1.3} layers={2} />
                 <ambientLight  intensity={1.3}  />
               </SatOrbit>
-            </Suspense>
+            
           </group>
           <RenderOrder />
           <OrbitControls enableRotate={false} enablePan={false} enableZoom={false}  />
