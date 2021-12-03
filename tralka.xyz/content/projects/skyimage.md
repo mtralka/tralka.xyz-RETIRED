@@ -3,21 +3,20 @@ title: SkyImage
 subtitle: Novel cloud validation workflow
 skills:
   - Python
-  - Conda
-  - Git
-skill:
-  - Python
+  - GDAL
   - Docker
 links:
   - text: Github
     icon: ion:logo-github
     link: https://github.com/mtralka/SkyImage
+  - icon: cib:read-the-docs
+    text: Documentation
+    link: https://mtralka.github.io/SkyImage/
 slug: skyimage
 link: /projects/skyimage
 ---
-# SkyImage
 
-**Purpose**
+## Purpose
 
 Workflow to create a novel cloud validation dataset based on ground-based images of the sky and Sentinel-2 / MODIS imagery. See <https://doi.org/10.1016/j.jag.2020.102253> - funded by NASA grant \[80NSSC19M0222, 80NSSC19K1592]
 
@@ -39,30 +38,30 @@ conda create --name <env> --file requirements.txt
 
 `SkyImage` reads possible stations through a `stations.json` file in the root project directory. The structure is as follows
 
-```javascript
-{
-    $STATION_NAME: {
-     "lat" : $LAT,
-     "lon" : $LON
-    },
-    ...
-}
+```json
+ {
+        $STATION_NAME: {
+         "lat" : $LAT,
+         "lon" : $LON
+        },
+        ...
+ }
 ```
 
 #### Where
 
-* `$STATION_NAME` is the searcable station name callable through the `station` kwarg in the main `SkyImage` object.
-* `$LAT` and `$LON` are used as the coordinates for poi extraction from MODIS imagery and for all subsequent ground imagery processing 
+- `$STATION_NAME` is the searcable station name callable through the `station` kwarg in the main `SkyImage` object.
+- `$LAT` and `$LON` are used as the coordinates for poi extraction from MODIS imagery and for all subsequent ground imagery processing
 
 #### Example
 
-```javascript
-{
-    "SKYCAM1: {
-     "lat" : 38.99,
-     "lon" : -76.85
+```json
+    {
+        "SKYCAM1: {
+         "lat" : 38.99,
+         "lon" : -76.85
+        }
     }
-}
 ```
 
 ## `SkyImage` Object
@@ -88,7 +87,7 @@ modis_path = "path/to/modis/data"
 ground_path = "path/to/ground/data"
 
 si = skyimage.SkyImage(
-    year=2020, j_day="92", station="SKYCAM1",modis_path=modis_path, ground_path=ground_path)
+  year=2020, j_day="92", station="SKYCAM1",modis_path=modis_path, ground_path=ground_path)
 ```
 
 Run `Sky` and `Ground` sub-objects

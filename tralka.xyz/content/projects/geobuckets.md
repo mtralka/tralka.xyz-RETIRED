@@ -11,42 +11,49 @@ links:
 slug: geobuckets
 link: /projects/geobuckets
 ---
-# 🌎🪣 GeoBuckets
+
+# 🌎🪣
 
 Lightweight Javascript (TypeScript, really) library for classification. Dependency free, tested, and type safe.
 
 ## Features
 
-* :fire: supports **6** classification types
-* ⚖️: Small!
+- 🔥 supports **6** classification types
+- ⚖️: Small!
 
-  * :rocket: **4.4kb** minifed, **1.7kb** gzipped
-  * 0️⃣ zero dependencies
-  * 🌲 tree-shakeable
-* :test_tube: fully tested
-* :label: fully typed
-* :rock: asynchronous and non-blocking
+  - 🚀 **4.4kb** minifed, **1.7kb** gzipped
+  - 0️⃣ zero dependencies
+  - 🌲 tree-shakeable
+
+- 🧪 fully tested
+- 🏷️ fully typed
+- 🪨 asynchronous and non-blocking
 
 ## Supports
 
-* Equal Intervals (EQI)
+- Equal Intervals (EQI)
 
-  * `equalIntervalBuckets`
-* Standard Deviation (STD)
+  - `equalIntervalBuckets`
 
-  * `standardDeviationBuckets`
-* Arithmetic Progression (APG)
+- Standard Deviation (STD)
 
-  * `arithmeticProgressionBuckets`
-* Geometric Progression (GPG)
+  - `standardDeviationBuckets`
 
-  * `geometricProgressionBuckets`
-* Quantiles (QNT)
+- Arithmetic Progression (APG)
 
-  * `quantileBuckets`
-* Jenks (JNK)
+  - `arithmeticProgressionBuckets`
 
-  * `jenksBuckets`
+- Geometric Progression (GPG)
+
+  - `geometricProgressionBuckets`
+
+- Quantiles (QNT)
+
+  - `quantileBuckets`
+
+- Jenks (JNK)
+
+  - `jenksBuckets`
 
 ## Install
 
@@ -90,4 +97,4 @@ const buckets: Array<number> = await generateBuckets(
 console.log(buckets) >> [10, 35, 60, 98];
 ```
 
-*A modern implementation of the [GeoStats]("https://github.com/simogeo/geostats") library by Simon Georget (MIT license)*
+_A modern implementation of the [GeoStats]("https://github.com/simogeo/geostats") library by Simon Georget (MIT license)_
