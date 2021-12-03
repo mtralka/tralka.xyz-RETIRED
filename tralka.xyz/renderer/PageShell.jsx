@@ -117,7 +117,7 @@ function Content({ children }) {
 }
 
 const Footer = () => (
-    <div
+    <footer
       w="screen"
       h="min-14"
       bg="white"
@@ -149,5 +149,5 @@ const Footer = () => (
         </div>
       }
       
-    </div>
+    </footer>
   )

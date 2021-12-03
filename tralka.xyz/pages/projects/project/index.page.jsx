@@ -66,7 +66,7 @@ function Page({ attributes, html}) {
 
                 {/* SKILL PILLS */}
                 {attributes.skills &&
-                  <div space="x-3" display="flex" justify="center" align="center" flex="wrap">
+                  <div space="x-3" display="flex" justify="center" items="center" flex="wrap">
                   {attributes.skills.map((skill) => 
                     <Pill
                       text={skill}
@@ -85,9 +85,15 @@ function Page({ attributes, html}) {
                     <a
                     href={link.link}
                     key={link.link}
-                    aria-label={link.text}>
-                      <Icon name={link.icon} w="10" h="10"   />
-                      <span>{link.text}</span>
+                    aria-label={link.text}
+                    display="flex"
+                    flex="col"
+                    justify="center"
+                    items="center"
+                    p="1"
+                    >
+                      <Icon name={link.icon} h="9" w="9"  />
+                      <p>{link.text}</p>
                     </a>
                     
                   )}
