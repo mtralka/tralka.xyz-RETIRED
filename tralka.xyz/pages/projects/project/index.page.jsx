@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "../../../components/Icon";
 import Pill from "../../../components/Pill";
 export { Page };
 
@@ -65,15 +66,32 @@ function Page({ attributes, html}) {
 
                 {/* SKILL PILLS */}
                 {attributes.skills &&
-                  <div space="x-3">
+                  <div space="x-3" display="flex" justify="center" align="center" flex="wrap">
                   {attributes.skills.map((skill) => 
                     <Pill
                       text={skill}
                       key={skill}
+                      m="t-1"
                     />
                   )}
                   </div>
                   
+                }
+
+                {/* LINKS */}
+                {attributes.links &&
+                  <div space="x-3" display="flex" justify="center" align="center">
+                  {attributes.links.map((link) => 
+                    <a
+                    href={link.link}
+                    key={link.link}
+                    aria-label={link.text}>
+                      <Icon name={link.icon} w="10" h="10"   />
+                      <span>{link.text}</span>
+                    </a>
+                    
+                  )}
+                  </div>
                 }
               </div>
 

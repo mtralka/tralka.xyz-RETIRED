@@ -7,7 +7,7 @@ skills:
 links:
   - text: Github
     icon: mdi:github
-    link: www.google.com
+    link: https://github.com/mtralka/EOPlatform
 slug: eoplatform
 link: /projects/eoplatform
 ---
