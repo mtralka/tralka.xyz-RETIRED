@@ -9,6 +9,13 @@ skills:
   - Tailwind & Windi CSS
   - Netlify
   - DeckGL
+links:
+  - text: Deployed Site
+    link: https://mgwrvisualizer.netlify.app/
+    icon: gg:website
+  - text: Github
+    icon: ion:logo-github
+    link: https://github.com/mtralka/MGWRVisualizer
 slug: mgwrvisualizer
 link: /projects/mgwrvisualizer
 ---
