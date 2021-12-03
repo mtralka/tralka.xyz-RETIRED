@@ -4,6 +4,7 @@ subtitle: Novel cloud validation workflow
 skills:
   - Python
   - Conda
+  - Git
 skill:
   - Python
   - Docker
