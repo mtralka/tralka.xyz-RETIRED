@@ -82,7 +82,7 @@
     },
     {
       "icon": "file-icons:leaflet",
-      "name": "DeckGL & LeafletJS"
+      "name": "LeafletJS"
     },
     {
       "name": "Conda",
@@ -91,6 +91,10 @@
     {
       "icon": "vscode-icons:file-type-affinitydesigner",
       "name": "Affinity Photo"
+    },
+    {
+      "name": "DeckGL",
+      "icon": "ph:map-trifold-fill"
     }
   ]
 }
