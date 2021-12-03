@@ -1,12 +1,13 @@
 ---
 title: EOPlatform
+subtitle: Remote sensing made easy
 skills:
   - Python
+  - Git
 links:
-  - text: "Github"
-    icon: "mdi:github"
-    link: "www.google.com"
-subtitle: Remote sensing made easy
+  - text: Github
+    icon: mdi:github
+    link: www.google.com
 slug: eoplatform
 link: /projects/eoplatform
 ---
