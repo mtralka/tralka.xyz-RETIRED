@@ -8,6 +8,7 @@ skills:
   - CSS
   - Tailwind & Windi CSS
   - Netlify
+  - DeckGL
 slug: mgwrvisualizer
 link: /projects/mgwrvisualizer
 ---
